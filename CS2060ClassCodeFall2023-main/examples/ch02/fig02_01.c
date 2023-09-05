@@ -1,11 +1,32 @@
 // fig02_01.c
-// A first program in C.
+//
+//  CS2060
+//
+//I am using xcode
+//
+
 #include <stdio.h>
 
-// function main begins program execution 
+double calculateArea(int length, int width);
+// function main begins program execution
 int main(void) {
-   printf("Welcome to C!\n");
-} // end function main 
+    int  length = 0;
+    int width = 0;
+    printf("Welcome to C!\n");
+    puts("Enter the length");
+    int scanfReturn = scanf("%d", &length);
+    if (scanfReturn == 1) {
+        puts("Enter the width");
+        scanf("%d", &width);
+        int area = length * width;
+        printf("%d\n", area);
+        double averageResult = (double)length / width;
+        printf("%.1lf\n", averageResult);
+    }
+    return 0;
+} // end function main
+
+
 
 
 
@@ -14,7 +35,7 @@ int main(void) {
  * Pearson Education, Inc. All Rights Reserved.                           *
  *                                                                        *
  * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
+ * best efforts in preparing the book. These efforts include the          *r
  * development, research, and testing of the theories and programs        *
  * to determine their effectiveness. The authors and publisher make       *
  * no warranty of any kind, expressed or implied, with regard to these    *
